@@ -1,0 +1,25 @@
+<templateSet group="tsc-typescript">
+  <template name="t-rxbehaviorgs" value="/* TODO: 数据流定义 */&#10;$behaviorName$$ = new BehaviorSubject&lt;$string$&gt;($initialValue$)&#10;&#10;get $behaviorName$() {&#10;     return this.$behaviorName$$;&#10;}&#10;&#10;set $behaviorName$(value: $string$) {&#10;     this.$behaviorName$$.next(value);&#10;}" description="BehaviorSubject-w-getter-setter" toReformat="false" toShortenFQNames="true">
+    <variable name="behaviorName" expression="" defaultValue="&quot;behaviorName&quot;" alwaysStopAt="true" />
+    <variable name="string" expression="" defaultValue="&quot;string&quot;" alwaysStopAt="true" />
+    <variable name="initialValue" expression="" defaultValue="&quot;initialValue&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="TS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="t-td" value="// TODO: $1$" description="todo-comment" toReformat="false" toShortenFQNames="true">
+    <variable name="1" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="t-behavior" value="/* TODO: 数据流定义 */&#10;$behaviorName$$ = new BehaviorSubject&lt;$string$&gt;($initialValue$)&#10;" description="BehaviorSubject" toReformat="true" toShortenFQNames="true">
+    <variable name="behaviorName" expression="" defaultValue="&quot;behaviorName&quot;" alwaysStopAt="true" />
+    <variable name="string" expression="" defaultValue="&quot;string&quot;" alwaysStopAt="true" />
+    <variable name="initialValue" expression="" defaultValue="&quot;initialValue&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="TS_EXPRESSION" value="true" />
+      <option name="TS_STATEMENT" value="true" />
+    </context>
+  </template>
+</templateSet>
