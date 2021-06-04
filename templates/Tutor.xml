@@ -1,8 +1,0 @@
-<templateSet group="Tutor">
-  <template name="t-td" value="&lt;!-- TODO: $description$ --&gt;" description="todo-comment" toReformat="false" toShortenFQNames="true">
-    <variable name="description" expression="" defaultValue="" alwaysStopAt="true" />
-    <context>
-      <option name="HTML" value="true" />
-    </context>
-  </template>
-</templateSet>
