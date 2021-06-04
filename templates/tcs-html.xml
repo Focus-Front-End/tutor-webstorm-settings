@@ -1,0 +1,79 @@
+<templateSet group="tcs-html">
+  <template name="t-td" value="&lt;!-- TODO $1$ --&gt;" description="todo-comment" toReformat="true" toShortenFQNames="true">
+    <variable name="1" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="t-ngif" value="&lt;ng-container *ngIf=&quot;$data$$ | async as $data$&quot;&gt;&#10;    &#10;&lt;/ng-container&gt;" description="ng-container-w-ngIf" toReformat="false" toShortenFQNames="true">
+    <variable name="data" expression="" defaultValue="data" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="t-ngifv" value="&lt;ng-container *ngIf=&quot;($data$$ | async) === $value$&quot;&gt;&#10;    &#10;&lt;/ng-container&gt;" description="ng-container-w-ngIf-to-value" toReformat="false" toShortenFQNames="true">
+    <variable name="data" expression="" defaultValue="data" alwaysStopAt="true" />
+    <variable name="value" expression="" defaultValue="value" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="t-ngt" value="&lt;ng-template $1$&gt;&#10;    $TemplateContent$&#10;&lt;/ng-template&gt;$END$" description="ng-template" toReformat="true" toShortenFQNames="true">
+    <variable name="1" expression="" defaultValue="&quot;#tplName&quot;" alwaysStopAt="true" />
+    <variable name="TemplateContent" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="t-ngife" value="&lt;ng-container *ngIf=&quot;$TODO$; else $tplName$&quot;&gt;&#10;    &#10;&lt;/ng-container&gt;&#10;&lt;ng-template #$tplName$&gt;&#10;    &#10;&lt;/ng-template&gt;" description="ng-container-w-if-else-template" toReformat="true" toShortenFQNames="true">
+    <variable name="TODO" expression="" defaultValue="&quot;TODO&quot;" alwaysStopAt="true" />
+    <variable name="tplName" expression="" defaultValue="&quot;tplName&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="t-ngs" value="&lt;ng-container [ngSwitch]=&quot;$conditionExpression$&quot;&gt;&#10; &lt;ng-container *ngSwitchCase=&quot;$expression$&quot;&gt;$output$&lt;/ng-container&gt;&#10; &lt;ng-container *ngSwitchDefault&gt;$output2$&lt;/ng-container&gt;&#10;&lt;/ng-container&gt;" description="ngSwitch" toReformat="false" toShortenFQNames="true">
+    <variable name="conditionExpression" expression="" defaultValue="&quot;conditionExpression&quot;" alwaysStopAt="true" />
+    <variable name="expression" expression="" defaultValue="&quot;expression&quot;" alwaysStopAt="true" />
+    <variable name="output" expression="" defaultValue="&quot;output&quot;" alwaysStopAt="true" />
+    <variable name="output2" expression="" defaultValue="&quot;output2&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="t-ngstyle" value="[ngStyle]=&quot;{$style$: $expression$}&quot;" description="Angular ngStyle" toReformat="true" toShortenFQNames="true">
+    <variable name="style" expression="" defaultValue="&quot;style&quot;" alwaysStopAt="true" />
+    <variable name="expression" expression="" defaultValue="&quot;expression&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="t-style" value="[style.$property$]=&quot;$expression$&quot;" description="Angular [style] binding" toReformat="true" toShortenFQNames="true">
+    <variable name="property" expression="" defaultValue="&quot;property&quot;" alwaysStopAt="true" />
+    <variable name="expression" expression="" defaultValue="&quot;expression&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="t-ngf" value="&lt;ng-container *ngFor=&quot;let $item$ of $list$; trackBy:$item$.id&quot;&gt;&#10;    $content$&#10;&lt;/ng-container&gt;" description="Angular *ngFor with trackBy" toReformat="true" toShortenFQNames="true">
+    <variable name="item" expression="" defaultValue="&quot;item&quot;" alwaysStopAt="true" />
+    <variable name="list" expression="" defaultValue="&quot;list&quot;" alwaysStopAt="true" />
+    <variable name="content" expression="" defaultValue="&quot;content&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="t-ngrl" value="[routerLink]=&quot;['/$routePath$']&quot; routerLinkActive=&quot;$router_link-active$&quot; $END$" description="Angular routerLink" toReformat="true" toShortenFQNames="true">
+    <variable name="routePath" expression="" defaultValue="&quot;routePath&quot;" alwaysStopAt="true" />
+    <variable name="router_link-active" expression="" defaultValue="&quot;router-link-active&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="t-ngc" value="&lt;ng-container $1$&gt;&lt;/ng-container&gt;" description="ng-container" toReformat="false" toShortenFQNames="true">
+    <variable name="1" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+</templateSet>
