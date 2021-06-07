@@ -1,0 +1,198 @@
+<templateSet group="tsc-typescript">
+  <template name="t-rxbehaviorgs" value="/* TODO: 数据流定义 */&#10;$behaviorName$$ = new BehaviorSubject&lt;$string$&gt;($initialValue$)&#10;&#10;get $behaviorName$() {&#10;     return this.$behaviorName$$;&#10;}&#10;&#10;set $behaviorName$(value: $string$) {&#10;     this.$behaviorName$$.next(value);&#10;}" description="BehaviorSubject-w-getter-setter" toReformat="false" toShortenFQNames="true">
+    <variable name="behaviorName" expression="" defaultValue="&quot;behaviorName&quot;" alwaysStopAt="true" />
+    <variable name="string" expression="" defaultValue="&quot;string&quot;" alwaysStopAt="true" />
+    <variable name="initialValue" expression="" defaultValue="&quot;initialValue&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="t-td" value="// TODO: $1$" description="todo-comment" toReformat="false" toShortenFQNames="true">
+    <variable name="1" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="t-behavior" value="/* TODO: 数据流定义 */&#10;$behaviorName$$ = new BehaviorSubject&lt;$string$&gt;($initialValue$)&#10;" description="BehaviorSubject" toReformat="true" toShortenFQNames="true">
+    <variable name="behaviorName" expression="" defaultValue="&quot;behaviorName&quot;" alwaysStopAt="true" />
+    <variable name="string" expression="" defaultValue="&quot;string&quot;" alwaysStopAt="true" />
+    <variable name="initialValue" expression="" defaultValue="&quot;initialValue&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="t-rxreplay" value="/* TODO: $NAME$ */&#10;$behaviorName$$ = new ReplaySubject&lt;$string$&gt;($1$)" description="ReplaySubject" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="&quot;数据流定义&quot;" alwaysStopAt="true" />
+    <variable name="behaviorName" expression="" defaultValue="&quot;behaviorName&quot;" alwaysStopAt="true" />
+    <variable name="string" expression="" defaultValue="&quot;string&quot;" alwaysStopAt="true" />
+    <variable name="1" expression="" defaultValue="&quot;1&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="t-rxfrom" value="from($object$)&#10;    .map(v =&gt; v)&#10;    .filter(v =&gt; true)&#10;    .subscribe(&#10;        value =&gt; { $console$ },&#10;        error =&gt; { $error$ },&#10;        () =&gt; { $complete$ }&#10;    );" description="rxjs.Observable.from.map.filter" toReformat="true" toShortenFQNames="true">
+    <variable name="object" expression="" defaultValue="&quot;object&quot;" alwaysStopAt="true" />
+    <variable name="console" expression="" defaultValue="&quot;console.log(value)&quot;" alwaysStopAt="true" />
+    <variable name="error" expression="" defaultValue="&quot;console.log(error)&quot;" alwaysStopAt="true" />
+    <variable name="complete" expression="" defaultValue="&quot;console.log('complete')&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="t-rxof" value="of($object$)&#10;    .map(v =&gt; v)&#10;    .filter(v =&gt; true)&#10;    .subscribe(&#10;        value =&gt; { $console$ },&#10;        error =&gt; { $error$ },&#10;        () =&gt; { $complete$ }&#10;    );" description="rxjs.Observable.of" toReformat="false" toShortenFQNames="true">
+    <variable name="object" expression="" defaultValue="&quot;object&quot;" alwaysStopAt="true" />
+    <variable name="console" expression="" defaultValue="&quot;console.log(value)&quot;" alwaysStopAt="true" />
+    <variable name="error" expression="" defaultValue="&quot;console.error(error)&quot;" alwaysStopAt="true" />
+    <variable name="complete" expression="" defaultValue="&quot;console.log('complete')&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="t-rxevent" value="fromEvent($target$, $eventName$)&#10;    .map(v =&gt; $eventName$)&#10;    .map(v =&gt; v)&#10;    .filter(v =&gt; true)&#10;    .subscribe(&#10;        value =&gt; { $console$ },&#10;        error =&gt; { $error$ },&#10;        () =&gt; { $complete$ }&#10;    );" description="rxjs.Observable.fromEvent" toReformat="true" toShortenFQNames="true">
+    <variable name="target" expression="" defaultValue="&quot;target&quot;" alwaysStopAt="true" />
+    <variable name="eventName" expression="" defaultValue="&quot;eventName&quot;" alwaysStopAt="true" />
+    <variable name="console" expression="" defaultValue="&quot;console.log(value)&quot;" alwaysStopAt="true" />
+    <variable name="error" expression="" defaultValue="&quot;console.error(error)&quot;" alwaysStopAt="true" />
+    <variable name="complete" expression="" defaultValue="&quot;console.log('complete')&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="t-destroy" value="private destroyed$ = new Subject&lt;void&gt;();&#10;&#10;ngOnDestroy(): void {&#10;    this.destroyed$.next();&#10;    this.destroyed$.complete();&#10;}" description="Destroyed-Subject" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="t-getpagedatai" value="constructor(private http: HttpClient) {}&#10;&#10;// $usage$&#10;getPageData(params: $params$): Observable&lt;Page&lt;$any$&gt;&gt; {&#10;    return this.http.get&lt;Page&lt;$any$&gt;&gt;(`$api$`, {&#10;        params: {&#10;            ...params&#10;        } as any&#10;    });&#10;}" description="Get-Page&lt;T&gt;-Data-w-HttpClient-injected" toReformat="true" toShortenFQNames="true">
+    <variable name="usage" expression="" defaultValue="&quot;获取数据&quot;" alwaysStopAt="true" />
+    <variable name="params" expression="" defaultValue="&quot;any&quot;" alwaysStopAt="true" />
+    <variable name="any" expression="" defaultValue="&quot;any&quot;" alwaysStopAt="true" />
+    <variable name="api" expression="" defaultValue="&quot;/tutor-focus-gateway/api&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="t-getpagedata" value="// $usage$&#10;getPageData(params: $params$): Observable&lt;Page&lt;$any$&gt;&gt; {&#10;    return this.http.get&lt;Page&lt;$any$&gt;&gt;(`$api$`, {&#10;        params: {&#10;            ...params&#10;        } as any&#10;    });&#10;}" description="Get-Page&lt;T&gt;-Data" toReformat="true" toShortenFQNames="true">
+    <variable name="usage" expression="" defaultValue="&quot;获取数据&quot;" alwaysStopAt="true" />
+    <variable name="params" expression="" defaultValue="&quot;any&quot;" alwaysStopAt="true" />
+    <variable name="any" expression="" defaultValue="&quot;any&quot;" alwaysStopAt="true" />
+    <variable name="api" expression="" defaultValue="&quot;/tutor-focus-gateway/api&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="t-oe" value="@Output() $eventName$ = new EventEmitter&lt;$eventType$&gt;();" description="Output-Event" toReformat="true" toShortenFQNames="true">
+    <variable name="eventName" expression="" defaultValue="&quot;eventName&quot;" alwaysStopAt="true" />
+    <variable name="eventType" expression="" defaultValue="&quot;eventType&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="t-sub" value="this.$function$&#10; .subscribe($arg$ =&gt; this.$property$ = $arg$);&#10;$END$" description="Angular observable subscribe" toReformat="true" toShortenFQNames="true">
+    <variable name="function" expression="" defaultValue="&quot;function&quot;" alwaysStopAt="true" />
+    <variable name="arg" expression="" defaultValue="&quot;arg&quot;" alwaysStopAt="true" />
+    <variable name="property" expression="" defaultValue="&quot;property&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="t-compi" value="import { Component, OnInit } from '@angular/core';&#10;&#10;@Component({&#10; selector: '$selector_name$',&#10; template: `$END$`&#10;})&#10;&#10;export class $Name$Component implements OnInit {&#10; constructor() { }&#10;&#10; ngOnInit() { }&#10;}" description="Angular component with an inline template" toReformat="true" toShortenFQNames="true">
+    <variable name="Name" expression="" defaultValue="&quot;Name&quot;" alwaysStopAt="true" />
+    <variable name="selector_name" expression="lowercaseAndDash(Name)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="TS_TOP_LEVEL_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="t-compr" value="import { Component } from '@angular/core';&#10;&#10;@Component({&#10; selector: '$prefix_app$',&#10; template: `&#10;  &lt;router-outlet&gt;&lt;/router-outlet&gt;&#10;  `&#10;})&#10;export class $App$Component { }&#10;$END$" description="Angular App root component" toReformat="true" toShortenFQNames="true">
+    <variable name="prefix_app" expression="" defaultValue="&quot;prefix-app&quot;" alwaysStopAt="true" />
+    <variable name="App" expression="" defaultValue="&quot;App&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="TS_TOP_LEVEL_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="t-compv" value="import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';&#10;import { Component, Input, OnInit, forwardRef } from '@angular/core';&#10;&#10;export const $COMPONENT_NAME$_VALUE_ACCESSOR: any = {&#10;    provide: NG_VALUE_ACCESSOR,&#10;    useExisting: forwardRef(() =&gt; $ComponentName$Component),&#10;    multi: true&#10;};&#10;&#10;@Component({&#10;    selector: '$selectorName$',&#10;    templateUrl: './$name$.component.html',&#10;    styleUrls: ['./$name$.component.css'],&#10;    providers: [$COMPONENT_NAME$_VALUE_ACCESSOR]&#10;})&#10;export class $ComponentName$Component implements OnInit, ControlValueAccessor {&#10;&#10;    private _value: any;&#10;&#10;    set value(value: any) {&#10;        this._value = value;&#10;        this.notifyValueChange();&#10;    }&#10;&#10;    get value(): any {&#10;        return this._value;&#10;    }&#10;&#10;    onChange: (value) =&gt; {};&#10;    onTouched: () =&gt; {};&#10;&#10;    constructor() { }&#10;&#10;    notifyValueChange(): void {&#10;        if (this.onChange) {&#10;            this.onChange(this.value);&#10;        }&#10;    }&#10;&#10;    ngOnInit(): void {&#10;        &#10;    }&#10;&#10;    writeValue(obj: any): void {&#10;        this._value = obj;&#10;    }&#10;&#10;    registerOnChange(fn: any): void {&#10;        this.onChange = fn;&#10;    }&#10;&#10;    registerOnTouched(fn: any): void {&#10;        this.onTouched = fn;&#10;    }&#10;&#10;    setDisabledState(isDisabled: boolean): void {&#10;    }&#10;}" description="Angular-Component-w-NG_VALUE_ACCESSOR" toReformat="false" toShortenFQNames="true">
+    <variable name="COMPONENT_NAME" expression="" defaultValue="&quot;COMPONENT_NAME&quot;" alwaysStopAt="true" />
+    <variable name="ComponentName" expression="" defaultValue="&quot;ComponentName&quot;" alwaysStopAt="true" />
+    <variable name="selectorName" expression="" defaultValue="&quot;selector-name&quot;" alwaysStopAt="true" />
+    <variable name="name" expression="" defaultValue="&quot;name&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="TS_TOP_LEVEL_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="t-comp" value="import { Component, OnInit } from '@angular/core';&#10;&#10;@Component({&#10; selector: '$selector_name$',&#10; templateUrl: '$name$.component.html'&#10;})&#10;&#10;export class $Name$Component implements OnInit {&#10; constructor() { }&#10;&#10; ngOnInit() { }$END$&#10;}" description="Angular component" toReformat="true" toShortenFQNames="true">
+    <variable name="Name" expression="" defaultValue="&quot;Name&quot;" alwaysStopAt="true" />
+    <variable name="name" expression="lowercaseAndDash(Name)" defaultValue="" alwaysStopAt="true" />
+    <variable name="selector_name" expression="lowercaseAndDash(Name)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="TS_TOP_LEVEL_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="t-pipe" value="import { Pipe, PipeTransform } from '@angular/core';&#10;&#10;@Pipe({&#10; name: '$selector_name$'&#10;})&#10;&#10;export class $Name$Pipe implements PipeTransform {&#10; transform(value: any, ...args: any[]): any {&#10;  $END$&#10; }&#10;}" description="Angular pipe" toReformat="true" toShortenFQNames="true">
+    <variable name="Name" expression="" defaultValue="&quot;Name&quot;" alwaysStopAt="true" />
+    <variable name="selector_name" expression="lowercaseAndDash(Name)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="TS_TOP_LEVEL_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="t-service" value="import { Injectable } from '@angular/core';&#10;&#10;@Injectable()&#10;export class $Name$Service {&#10;$END$&#10; constructor() { }&#10;}" description="Angular service" toReformat="true" toShortenFQNames="true">
+    <variable name="Name" expression="" defaultValue="&quot;Name&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="TS_TOP_LEVEL_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="t-validator" value="import { Directive } from '@angular/core';&#10;import { NG_VALIDATORS, AbstractControl, Validator, ValidationErrors } from '@angular/forms';&#10;&#10;@Directive({&#10;    selector: '[$validatorName$][ngModel]',&#10;    providers: [&#10;        { provide: NG_VALIDATORS, useExisting: $className$, multi: true }&#10;    ]&#10;})&#10;&#10;export class $className$ implements Validator {&#10;    validate(c: AbstractControl): ValidationErrors | null {&#10;        if (valid) {&#10;            return null;&#10;        }&#10;&#10;        return {&#10;            $validatorName$: {&#10;                valid: false&#10;            }&#10;        };&#10;    }&#10;}" description="Angular-Validator" toReformat="false" toShortenFQNames="true">
+    <variable name="validatorName" expression="" defaultValue="&quot;validatorName&quot;" alwaysStopAt="true" />
+    <variable name="className" expression="" defaultValue="&quot;className&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="TS_TOP_LEVEL_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="t-validatorfn" value="export const validator = (parameters: any): ValidatorFn =&gt;&#10;    (abstractControl: AbstractControl): ValidationErrors | null =&gt; {&#10;        return null;&#10;};" description="Angular-Validator-Function" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="t-asyncvalidatorfn" value="export const validator = (parameters: any): AsyncValidatorFn =&gt;&#10;    (abstractControl: AbstractControl): Promise&lt;ValidationErrors | null&gt; | Observable&lt;ValidationErrors | null&gt; =&gt; {&#10;        return Promise.resolve(null);&#10;    };" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="t-directive" value="import { Directive } from '@angular/core';&#10;&#10;@Directive({ selector: '[$selector_name$]' })&#10;export class $Name$Directive {&#10; constructor() { }&#10;}" description="Angular directive" toReformat="true" toShortenFQNames="true">
+    <variable name="Name" expression="" defaultValue="&quot;Name&quot;" alwaysStopAt="true" />
+    <variable name="selector_name" expression="lowercaseAndDash(Name)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="TS_TOP_LEVEL_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="t-directivecss" value="import { Directive, ElementRef, Input } from '@angular/core';&#10;&#10;@Directive({&#10;    selector: '[app-$name$]',&#10;})&#10;export class $Name$Directive {&#10;    constructor(private elementRef: ElementRef) {}&#10;&#10;    private $fnname$($fnvalue$: string) {&#10;        this.elementRef.nativeElement.style.$proptery$ = $propvalue$;&#10;    }&#10;}" description="Angular-CSS-Directive" toReformat="true" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="&quot;name&quot;" alwaysStopAt="true" />
+    <variable name="Name" expression="" defaultValue="&quot;Name&quot;" alwaysStopAt="true" />
+    <variable name="fnname" expression="" defaultValue="&quot;name&quot;" alwaysStopAt="true" />
+    <variable name="fnvalue" expression="" defaultValue="&quot;value&quot;" alwaysStopAt="true" />
+    <variable name="proptery" expression="" defaultValue="&quot;property&quot;" alwaysStopAt="true" />
+    <variable name="propvalue" expression="" defaultValue="&quot;value&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="TS_TOP_LEVEL_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="t-trackby" value="$trackBy$(index: number, $name$: $model$): $number$ {&#10;  return $name$.$id$;&#10;}" description="TrackBy-Function" toReformat="false" toShortenFQNames="true">
+    <variable name="trackBy" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="model" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="number" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="t-topromise" value="this.$logic$.$function$&#10;    toPromise()&#10;    .then($arg$ =&gt; {&#10;        this.$property$ = $arg$;&#10;    });&#10;    .catch($error$ =&gt; {&#10;        console.error($error$);&#10;    }" description="Observable-toPromise-then-catch" toReformat="false" toShortenFQNames="true">
+    <variable name="logic" expression="" defaultValue="&quot;logic&quot;" alwaysStopAt="true" />
+    <variable name="function" expression="" defaultValue="&quot;function&quot;" alwaysStopAt="true" />
+    <variable name="arg" expression="" defaultValue="&quot;arg&quot;" alwaysStopAt="true" />
+    <variable name="property" expression="" defaultValue="&quot;property&quot;" alwaysStopAt="true" />
+    <variable name="error" expression="" defaultValue="&quot;error&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+</templateSet>
