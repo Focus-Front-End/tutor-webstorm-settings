@@ -175,4 +175,24 @@
       <option name="TS_TOP_LEVEL_STATEMENT" value="true" />
     </context>
   </template>
+  <template name="t-trackby" value="$trackBy$(index: number, $name$: $model$): $number$ {&#10;  return $name$.$id$;&#10;}" description="TrackBy-Function" toReformat="false" toShortenFQNames="true">
+    <variable name="trackBy" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="model" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="number" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="t-topromise" value="this.$logic$.$function$&#10;    toPromise()&#10;    .then($arg$ =&gt; {&#10;        this.$property$ = $arg$;&#10;    });&#10;    .catch($error$ =&gt; {&#10;        console.error($error$);&#10;    }" description="Observable-toPromise-then-catch" toReformat="false" toShortenFQNames="true">
+    <variable name="logic" expression="" defaultValue="&quot;logic&quot;" alwaysStopAt="true" />
+    <variable name="function" expression="" defaultValue="&quot;function&quot;" alwaysStopAt="true" />
+    <variable name="arg" expression="" defaultValue="&quot;arg&quot;" alwaysStopAt="true" />
+    <variable name="property" expression="" defaultValue="&quot;property&quot;" alwaysStopAt="true" />
+    <variable name="error" expression="" defaultValue="&quot;error&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
 </templateSet>
