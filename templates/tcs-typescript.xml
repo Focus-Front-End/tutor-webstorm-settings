@@ -1,4 +1,4 @@
-<templateSet group="tsc-typescript">
+<templateSet group="tcs-typescript">
   <template name="t-rxbehaviorgs" value="/* TODO: 数据流定义 */&#10;$behaviorName$$ = new BehaviorSubject&lt;$string$&gt;($initialValue$)&#10;&#10;get $behaviorName$() {&#10;     return this.$behaviorName$$;&#10;}&#10;&#10;set $behaviorName$(value: $string$) {&#10;     this.$behaviorName$$.next(value);&#10;}" description="BehaviorSubject-w-getter-setter" toReformat="false" toShortenFQNames="true">
     <variable name="behaviorName" expression="" defaultValue="&quot;behaviorName&quot;" alwaysStopAt="true" />
     <variable name="string" expression="" defaultValue="&quot;string&quot;" alwaysStopAt="true" />
@@ -191,6 +191,46 @@
     <variable name="arg" expression="" defaultValue="&quot;arg&quot;" alwaysStopAt="true" />
     <variable name="property" expression="" defaultValue="&quot;property&quot;" alwaysStopAt="true" />
     <variable name="error" expression="" defaultValue="&quot;error&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="t-ngonchanges" value="ngOnChanges(changes: SimpleChanges): void {&#10;    //Called before any other lifecycle hook. Use it to inject dependencies, but avoid any serious work here.&#10;    //Add '${implements OnChanges}' to the class.&#10;    $END$&#10;}" description="Angular-Lifecycle-OnChanges-Hook" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="t-ngondestroy" value="ngOnDestroy(): void {&#10;    //Called once, before the instance is destroyed.&#10;    //Add 'implements OnDestroy' to the class.&#10;    $END$&#10;}" description="Angular-Lifecycle-OnDestroy-Hook" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="t-ngafterviewchecked" value="ngAfterViewChecked(): void {&#10;    //Called after every check of the component's view. Applies to components only.&#10;    //Add 'implements AfterViewChecked' to the class.&#10;    $END$&#10;}" description="Angular-Lifecycle-AfterViewChecked-Hook" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="t-ngafterviewinit" value="ngAfterViewInit(): void {&#10;    //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.&#10;    //Add 'implements AfterViewInit' to the class.&#10;    $END$&#10;}" description="Angular-Lifecycle-AfterViewInit-Hook" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="t-ngaftercontentchecked" value="ngAfterContentChecked(): void {&#10;    //Called after every check of the component's or directive's content.&#10;    //Add 'implements AfterContentChecked' to the class.&#10;    $END$&#10;}" description="Angular-Lifecycle-AfterContentChecked-Hook" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="t-ngaftercontentinit" value="ngAfterContentInit(): void {&#10;    //Called after ngOnInit when the component's or directive's content has been initialized.&#10;    //Add 'implements AfterContentInit' to the class.&#10;    $END$&#10;}" description="Angular-Lifecycle-AfterContentInit-Hook" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="t-ngdocheck" value="ngDoCheck(): void {&#10;    //Called every time that the input properties of a component or a directive are checked. Use it to extend change detection by performing a custom check.&#10;    //Add 'implements DoCheck' to the class.&#10;    $END$&#10;}" description="Angular-Lifecycle-DoCheck-Hook" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="t-ngoninit" value="ngOnInit(): void {&#10;    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.&#10;    //Add 'implements OnInit' to the class.&#10;    $END$&#10;}" description="Angular-Lifecycle-OnInit-Hook" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="TypeScript" value="true" />
     </context>
