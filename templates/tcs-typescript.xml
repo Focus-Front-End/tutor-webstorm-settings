@@ -1,4 +1,4 @@
-<templateSet group="tsc-typescript">
+<templateSet group="tcs-typescript">
   <template name="t-rxbehaviorgs" value="/* TODO: 数据流定义 */&#10;$behaviorName$$ = new BehaviorSubject&lt;$string$&gt;($initialValue$)&#10;&#10;get $behaviorName$() {&#10;     return this.$behaviorName$$;&#10;}&#10;&#10;set $behaviorName$(value: $string$) {&#10;     this.$behaviorName$$.next(value);&#10;}" description="BehaviorSubject-w-getter-setter" toReformat="false" toShortenFQNames="true">
     <variable name="behaviorName" expression="" defaultValue="&quot;behaviorName&quot;" alwaysStopAt="true" />
     <variable name="string" expression="" defaultValue="&quot;string&quot;" alwaysStopAt="true" />

@@ -1,0 +1,41 @@
+<templateSet group="tcs-css">
+  <template name="t-theme" value="@import 'src/theme/theme';" description="import-theme" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="t-rgb" value="background-color: rgb($r$, $g$, $b$)" description="rgb()" toReformat="false" toShortenFQNames="true">
+    <variable name="r" expression="" defaultValue="&quot;0&quot;" alwaysStopAt="true" />
+    <variable name="g" expression="" defaultValue="&quot;0&quot;" alwaysStopAt="true" />
+    <variable name="b" expression="" defaultValue="&quot;0&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="t-rgba" value="background-color: rgba($r$, $g$, $b$, $a$)" description="rgba()" toReformat="true" toShortenFQNames="true">
+    <variable name="r" expression="" defaultValue="&quot;0&quot;" alwaysStopAt="true" />
+    <variable name="g" expression="" defaultValue="&quot;0&quot;" alwaysStopAt="true" />
+    <variable name="b" expression="" defaultValue="&quot;0&quot;" alwaysStopAt="true" />
+    <variable name="a" expression="" defaultValue="&quot;0&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="t-flex" value="display: flex;&#10;justify-content: $flexStart$;&#10;align-items: $center$;" description="flex" toReformat="false" toShortenFQNames="true">
+    <variable name="flexStart" expression="" defaultValue="&quot;flex-start&quot;" alwaysStopAt="true" />
+    <variable name="center" expression="" defaultValue="&quot;center&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="t-absolute" value="position: absolute;&#10;left: $left$;&#10;right: $right$;&#10;width: $width$px;&#10;height: $height$px;&#10;text-align: $center$;" description="absolute" toReformat="false" toShortenFQNames="true">
+    <variable name="left" expression="" defaultValue="&quot;0&quot;" alwaysStopAt="true" />
+    <variable name="right" expression="" defaultValue="&quot;0&quot;" alwaysStopAt="true" />
+    <variable name="width" expression="" defaultValue="&quot;10&quot;" alwaysStopAt="true" />
+    <variable name="height" expression="" defaultValue="&quot;10&quot;" alwaysStopAt="true" />
+    <variable name="center" expression="" defaultValue="&quot;center&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+</templateSet>
